@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+html {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-gray);
+    padding: 100px 30px;
+    overflow: hidden;
+
+}
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 14px 1px #00000024;
+
+}
+
+.box{
+    padding: 30px;
+}
+.top{
+background-color: #fff;
+}
+.top h2 {
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+.top h3 {
+    color: var(--bright-yellow);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+.top p {
+    color: var(--grayish-blue);
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.one{
+    background-color: var(--cyan);
+}
+.one h3 {
+    color: #FFF;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.one p {
+    color:var(--light-gray) ;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.one p span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    
+}
+.one .button {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--bright-yellow);
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px 1px #00000024;
+    border-radius: 8px;
+}
+.two {
+    background-color: #49BEBD;
+}
+.two h3 {
+    color: #FFF;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+.two p{
+    color: var(--light-gray);
+    line-height: 1.5rem;
+}
+
+@media only screen and (min-width: 768px){
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .top{
+        grid-area: 1/ 1/ 2/ 3;
+    }
+    .one, .two {
+        grid-row: 2;
+    }
+    
+}
